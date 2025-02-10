@@ -1360,7 +1360,7 @@ gallery->Bind(wxEVT_RIBBONGALLERY_SELECTED, [&](wxRibbonGalleryEvent& evt){
 
 <a name="other"></a>
 
-## 9. Дополнительные компоненты wxWidgets
+## 9. Другие компоненты wxWidgets
 
 ### 9.1. wxAnimationCtrl
 <img src="wx-icons/animation_result.png" alt="wxAnimationCtrl Icon" width="32" height="32" />
