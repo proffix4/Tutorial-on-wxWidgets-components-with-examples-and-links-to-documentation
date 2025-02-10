@@ -9,8 +9,8 @@
 5. [Вкладка Menu/Toolbar](#menu_toolbar)  
 6. [Вкладка Layout](#layout)  
 7. [Вкладка Forms](#forms)  
-8. [Вкладка Ribbon](#ribbon)
-
+8. [Вкладка Ribbon](#ribbon)  
+9. [Другие компоненты](#other)
 ---
 
 <a name="common"></a>
@@ -1355,5 +1355,461 @@ gallery->Bind(wxEVT_RIBBONGALLERY_SELECTED, [&](wxRibbonGalleryEvent& evt){
 
 **Официальная документация**:  
 [https://docs.wxwidgets.org/3.2.6/classwx_ribbon_gallery.html](https://docs.wxwidgets.org/3.2.6/classwx_ribbon_gallery.html)
+
+---
+
+<a name="other"></a>
+
+## 9. Дополнительные компоненты wxWidgets
+
+### 9.1. wxAnimationCtrl
+<img src="wx-icons/animation_result.png" alt="wxAnimationCtrl Icon" width="32" height="32" />
+
+- **Назначение**: Отображает анимацию в формате GIF.
+
+- **Пример кода**:
+```cpp
+wxAnimationCtrl* animCtrl = new wxAnimationCtrl(parent, wxID_ANY);
+animCtrl->LoadFile("animation.gif", wxANIMATION_TYPE_GIF);
+animCtrl->Play();
+```
+
+#### Дополнительные примеры:
+```cpp
+// Пример 1. Создание wxAnimationCtrl
+wxAnimationCtrl* animCtrl = new wxAnimationCtrl(parent, wxID_ANY);
+animCtrl->LoadFile("animation.gif", wxANIMATION_TYPE_GIF);
+animCtrl->Play();
+
+// Пример 2. Изменение свойств wxAnimationCtrl
+wxAnimationCtrl* obj = new wxAnimationCtrl(parent, wxID_ANY);
+obj->Show();
+
+// Пример 3. Обработка событий wxAnimationCtrl
+obj->Bind(wxEVT_COMMAND, [&](wxCommandEvent& event) {
+    wxMessageBox("Событие произошло!");
+});
+```
+
+**Официальная документация**:  
+[https://docs.wxwidgets.org/3.2.6/classwx_animation_ctrl.html](https://docs.wxwidgets.org/3.2.6/classwx_animation_ctrl.html)
+
+---
+
+### 9.2. wxAuiNotebook
+<img src="wx-icons/auinotebook_result.png" alt="wxAuiNotebook Icon" width="32" height="32" />
+
+- **Назначение**: Расширенная версия wxNotebook с возможностью перемещения вкладок.
+
+- **Пример кода**:
+```cpp
+wxAuiNotebook* notebook = new wxAuiNotebook(parent, wxID_ANY);
+notebook->AddPage(new wxPanel(notebook, wxID_ANY), "Page 1");
+notebook->AddPage(new wxPanel(notebook, wxID_ANY), "Page 2");
+```
+
+#### Дополнительные примеры:
+```cpp
+// Пример 1. Создание wxAuiNotebook
+wxAuiNotebook* notebook = new wxAuiNotebook(parent, wxID_ANY);
+notebook->AddPage(new wxPanel(notebook, wxID_ANY), "Page 1");
+notebook->AddPage(new wxPanel(notebook, wxID_ANY), "Page 2");
+
+// Пример 2. Изменение свойств wxAuiNotebook
+wxAuiNotebook* obj = new wxAuiNotebook(parent, wxID_ANY);
+obj->Show();
+
+// Пример 3. Обработка событий wxAuiNotebook
+obj->Bind(wxEVT_COMMAND, [&](wxCommandEvent& event) {
+    wxMessageBox("Событие произошло!");
+});
+```
+
+**Официальная документация**:  
+[https://docs.wxwidgets.org/3.2.6/classwx_aui_notebook.html](https://docs.wxwidgets.org/3.2.6/classwx_aui_notebook.html)
+
+---
+
+### 9.3. wxAuiToolBar
+<img src="wx-icons/auitoolbar_result.png" alt="wxAuiToolBar Icon" width="32" height="32" />
+
+- **Назначение**: Гибкая панель инструментов с возможностью перемещения.
+
+- **Пример кода**:
+```cpp
+wxAuiToolBar* toolbar = new wxAuiToolBar(parent, wxID_ANY);
+toolbar->AddTool(wxID_NEW, "New", wxBitmap("new.png", wxBITMAP_TYPE_PNG));
+toolbar->Realize();
+```
+
+#### Дополнительные примеры:
+```cpp
+// Пример 1. Создание wxAuiToolBar
+wxAuiToolBar* toolbar = new wxAuiToolBar(parent, wxID_ANY);
+toolbar->AddTool(wxID_NEW, "New", wxBitmap("new.png", wxBITMAP_TYPE_PNG));
+toolbar->Realize();
+
+// Пример 2. Изменение свойств wxAuiToolBar
+wxAuiToolBar* obj = new wxAuiToolBar(parent, wxID_ANY);
+obj->Show();
+
+// Пример 3. Обработка событий wxAuiToolBar
+obj->Bind(wxEVT_COMMAND, [&](wxCommandEvent& event) {
+    wxMessageBox("Событие произошло!");
+});
+```
+
+**Официальная документация**:  
+[https://docs.wxwidgets.org/3.2.6/classwx_aui_tool_bar.html](https://docs.wxwidgets.org/3.2.6/classwx_aui_tool_bar.html)
+
+---
+
+### 9.4. wxBitmapToggleButton
+<img src="wx-icons/bitmap_toggle_button_result.png" alt="wxBitmapToggleButton Icon" width="32" height="32" />
+
+- **Назначение**: Кнопка-переключатель с изображением.
+
+- **Пример кода**:
+```cpp
+wxBitmapToggleButton* toggleBtn = new wxBitmapToggleButton(parent, wxID_ANY, wxBitmap("toggle.png", wxBITMAP_TYPE_PNG));
+```
+
+#### Дополнительные примеры:
+```cpp
+// Пример 1. Создание wxBitmapToggleButton
+wxBitmapToggleButton* toggleBtn = new wxBitmapToggleButton(parent, wxID_ANY, wxBitmap("toggle.png", wxBITMAP_TYPE_PNG));
+
+// Пример 2. Изменение свойств wxBitmapToggleButton
+wxBitmapToggleButton* obj = new wxBitmapToggleButton(parent, wxID_ANY);
+obj->Show();
+
+// Пример 3. Обработка событий wxBitmapToggleButton
+obj->Bind(wxEVT_COMMAND, [&](wxCommandEvent& event) {
+    wxMessageBox("Событие произошло!");
+});
+```
+
+**Официальная документация**:  
+[https://docs.wxwidgets.org/3.2.6/classwx_bitmap_toggle_button.html](https://docs.wxwidgets.org/3.2.6/classwx_bitmap_toggle_button.html)
+
+---
+
+### 9.5. wxCheckListBox
+<img src="wx-icons/checklistbox_result.png" alt="wxCheckListBox Icon" width="32" height="32" />
+
+- **Назначение**: Список с элементами-флажками.
+
+- **Пример кода**:
+```cpp
+wxCheckListBox* checklist = new wxCheckListBox(parent, wxID_ANY);
+checklist->Append("Item 1");
+checklist->Append("Item 2");
+```
+
+#### Дополнительные примеры:
+```cpp
+// Пример 1. Создание wxCheckListBox
+wxCheckListBox* checklist = new wxCheckListBox(parent, wxID_ANY);
+checklist->Append("Item 1");
+checklist->Append("Item 2");
+
+// Пример 2. Изменение свойств wxCheckListBox
+wxCheckListBox* obj = new wxCheckListBox(parent, wxID_ANY);
+obj->Show();
+
+// Пример 3. Обработка событий wxCheckListBox
+obj->Bind(wxEVT_COMMAND, [&](wxCommandEvent& event) {
+    wxMessageBox("Событие произошло!");
+});
+```
+
+**Официальная документация**:  
+[https://docs.wxwidgets.org/3.2.6/classwx_check_list_box.html](https://docs.wxwidgets.org/3.2.6/classwx_check_list_box.html)
+
+---
+
+### 9.6. wxCollapsiblePane
+<img src="wx-icons/collpane_result.png" alt="wxCollapsiblePane Icon" width="32" height="32" />
+
+- **Назначение**: Панель, которая может сворачиваться и разворачиваться.
+
+- **Пример кода**:
+```cpp
+wxCollapsiblePane* collapsiblePane = new wxCollapsiblePane(parent, wxID_ANY, "Click to expand");
+wxWindow* pane = collapsiblePane->GetPane();
+```
+
+#### Дополнительные примеры:
+```cpp
+// Пример 1. Создание wxCollapsiblePane
+wxCollapsiblePane* collapsiblePane = new wxCollapsiblePane(parent, wxID_ANY, "Click to expand");
+wxWindow* pane = collapsiblePane->GetPane();
+
+// Пример 2. Изменение свойств wxCollapsiblePane
+wxCollapsiblePane* obj = new wxCollapsiblePane(parent, wxID_ANY);
+obj->Show();
+
+// Пример 3. Обработка событий wxCollapsiblePane
+obj->Bind(wxEVT_COMMAND, [&](wxCommandEvent& event) {
+    wxMessageBox("Событие произошло!");
+});
+```
+
+**Официальная документация**:  
+[https://docs.wxwidgets.org/3.2.6/classwx_collapsible_pane.html](https://docs.wxwidgets.org/3.2.6/classwx_collapsible_pane.html)
+
+---
+
+### 9.7. wxDataViewListColumn
+<img src="wx-icons/dataviewlist_column_result.png" alt="wxDataViewListColumn Icon" width="32" height="32" />
+
+- **Назначение**: Колонка в wxDataViewListCtrl.
+
+- **Пример кода**:
+```cpp
+wxDataViewListCtrl* listCtrl = new wxDataViewListCtrl(parent, wxID_ANY);
+listCtrl->AppendTextColumn("Column 1");
+```
+
+#### Дополнительные примеры:
+```cpp
+// Пример 1. Создание wxDataViewListColumn
+wxDataViewListCtrl* listCtrl = new wxDataViewListCtrl(parent, wxID_ANY);
+listCtrl->AppendTextColumn("Column 1");
+
+// Пример 2. Изменение свойств wxDataViewListColumn
+wxDataViewListColumn* obj = new wxDataViewListColumn(parent, wxID_ANY);
+obj->Show();
+
+// Пример 3. Обработка событий wxDataViewListColumn
+obj->Bind(wxEVT_COMMAND, [&](wxCommandEvent& event) {
+    wxMessageBox("Событие произошло!");
+});
+```
+
+**Официальная документация**:  
+[https://docs.wxwidgets.org/3.2.6/classwx_data_view_list_column.html](https://docs.wxwidgets.org/3.2.6/classwx_data_view_list_column.html)
+
+---
+
+### 9.8. wxDocMDIParentFrame
+<img src="wx-icons/doc_mdi_parent_frame_result.png" alt="wxDocMDIParentFrame Icon" width="32" height="32" />
+
+- **Назначение**: Родительское окно для MDI-документов.
+
+- **Пример кода**:
+```cpp
+wxDocMDIParentFrame* frame = new wxDocMDIParentFrame(docManager, NULL, wxID_ANY, "MDI Frame");
+```
+
+#### Дополнительные примеры:
+```cpp
+// Пример 1. Создание wxDocMDIParentFrame
+wxDocMDIParentFrame* frame = new wxDocMDIParentFrame(docManager, NULL, wxID_ANY, "MDI Frame");
+
+// Пример 2. Изменение свойств wxDocMDIParentFrame
+wxDocMDIParentFrame* obj = new wxDocMDIParentFrame(parent, wxID_ANY);
+obj->Show();
+
+// Пример 3. Обработка событий wxDocMDIParentFrame
+obj->Bind(wxEVT_COMMAND, [&](wxCommandEvent& event) {
+    wxMessageBox("Событие произошло!");
+});
+```
+
+**Официальная документация**:  
+[https://docs.wxwidgets.org/3.2.6/classwx_doc_m_d_i_parent_frame.html](https://docs.wxwidgets.org/3.2.6/classwx_doc_m_d_i_parent_frame.html)
+
+---
+
+### 9.9. wxDocParentFrame
+<img src="wx-icons/doc_parent_frame_result.png" alt="wxDocParentFrame Icon" width="32" height="32" />
+
+- **Назначение**: Родительское окно документа.
+
+- **Пример кода**:
+```cpp
+wxDocParentFrame* frame = new wxDocParentFrame(docManager, NULL, wxID_ANY, "Doc Parent Frame");
+```
+
+#### Дополнительные примеры:
+```cpp
+// Пример 1. Создание wxDocParentFrame
+wxDocParentFrame* frame = new wxDocParentFrame(docManager, NULL, wxID_ANY, "Doc Parent Frame");
+
+// Пример 2. Изменение свойств wxDocParentFrame
+wxDocParentFrame* obj = new wxDocParentFrame(parent, wxID_ANY);
+obj->Show();
+
+// Пример 3. Обработка событий wxDocParentFrame
+obj->Bind(wxEVT_COMMAND, [&](wxCommandEvent& event) {
+    wxMessageBox("Событие произошло!");
+});
+```
+
+**Официальная документация**:  
+[https://docs.wxwidgets.org/3.2.6/classwx_doc_parent_frame.html](https://docs.wxwidgets.org/3.2.6/classwx_doc_parent_frame.html)
+
+---
+
+### 9.10. wxDocument
+<img src="wx-icons/document_result.png" alt="wxDocument Icon" width="32" height="32" />
+
+- **Назначение**: Документ в архитектуре Document/View.
+
+- **Пример кода**:
+```cpp
+class MyDocument : public wxDocument {
+public:
+    MyDocument() {}
+};
+```
+
+#### Дополнительные примеры:
+```cpp
+// Пример 1. Создание wxDocument
+class MyDocument : public wxDocument {
+public:
+    MyDocument() {}
+};
+
+// Пример 2. Изменение свойств wxDocument
+wxDocument* obj = new wxDocument(parent, wxID_ANY);
+obj->Show();
+
+// Пример 3. Обработка событий wxDocument
+obj->Bind(wxEVT_COMMAND, [&](wxCommandEvent& event) {
+    wxMessageBox("Событие произошло!");
+});
+```
+
+**Официальная документация**:  
+[https://docs.wxwidgets.org/3.2.6/classwx_document.html](https://docs.wxwidgets.org/3.2.6/classwx_document.html)
+
+---
+
+### 9.11. wxGenericDirCtrl
+<img src="wx-icons/genericdir_ctrl_result.png" alt="wxGenericDirCtrl Icon" width="32" height="32" />
+
+- **Назначение**: Контрол для отображения дерева каталогов.
+
+- **Пример кода**:
+```cpp
+wxGenericDirCtrl* dirCtrl = new wxGenericDirCtrl(parent, wxID_ANY);
+```
+
+#### Дополнительные примеры:
+```cpp
+// Пример 1. Создание wxGenericDirCtrl
+wxGenericDirCtrl* dirCtrl = new wxGenericDirCtrl(parent, wxID_ANY);
+
+// Пример 2. Изменение свойств wxGenericDirCtrl
+wxGenericDirCtrl* obj = new wxGenericDirCtrl(parent, wxID_ANY);
+obj->Show();
+
+// Пример 3. Обработка событий wxGenericDirCtrl
+obj->Bind(wxEVT_COMMAND, [&](wxCommandEvent& event) {
+    wxMessageBox("Событие произошло!");
+});
+```
+
+**Официальная документация**:  
+[https://docs.wxwidgets.org/3.2.6/classwx_generic_dir_ctrl.html](https://docs.wxwidgets.org/3.2.6/classwx_generic_dir_ctrl.html)
+
+---
+
+### 9.12. wxGridBagSizer
+<img src="wx-icons/grid_bag_sizer_result.png" alt="wxGridBagSizer Icon" width="32" height="32" />
+
+- **Назначение**: Расширенная версия wxGridSizer с возможностью объединения ячеек.
+
+- **Пример кода**:
+```cpp
+wxGridBagSizer* sizer = new wxGridBagSizer(5, 5);
+sizer->Add(new wxButton(parent, wxID_ANY, "Button"), wxGBPosition(0, 0), wxGBSpan(1, 2), wxEXPAND);
+```
+
+#### Дополнительные примеры:
+```cpp
+// Пример 1. Создание wxGridBagSizer
+wxGridBagSizer* sizer = new wxGridBagSizer(5, 5);
+sizer->Add(new wxButton(parent, wxID_ANY, "Button"), wxGBPosition(0, 0), wxGBSpan(1, 2), wxEXPAND);
+
+// Пример 2. Изменение свойств wxGridBagSizer
+wxGridBagSizer* obj = new wxGridBagSizer(parent, wxID_ANY);
+obj->Show();
+
+// Пример 3. Обработка событий wxGridBagSizer
+obj->Bind(wxEVT_COMMAND, [&](wxCommandEvent& event) {
+    wxMessageBox("Событие произошло!");
+});
+```
+
+**Официальная документация**:  
+[https://docs.wxwidgets.org/3.2.6/classwx_grid_bag_sizer.html](https://docs.wxwidgets.org/3.2.6/classwx_grid_bag_sizer.html)
+
+---
+
+### 9.13. wxHtmlWindow
+<img src="wx-icons/htmlwin_result.png" alt="wxHtmlWindow Icon" width="32" height="32" />
+
+- **Назначение**: Виджет для отображения HTML.
+
+- **Пример кода**:
+```cpp
+wxHtmlWindow* htmlWin = new wxHtmlWindow(parent, wxID_ANY);
+htmlWin->SetPage("<html><body><h1>Hello, wxHtmlWindow!</h1></body></html>");
+```
+
+#### Дополнительные примеры:
+```cpp
+// Пример 1. Создание wxHtmlWindow
+wxHtmlWindow* htmlWin = new wxHtmlWindow(parent, wxID_ANY);
+htmlWin->SetPage("<html><body><h1>Hello, wxHtmlWindow!</h1></body></html>");
+
+// Пример 2. Изменение свойств wxHtmlWindow
+wxHtmlWindow* obj = new wxHtmlWindow(parent, wxID_ANY);
+obj->Show();
+
+// Пример 3. Обработка событий wxHtmlWindow
+obj->Bind(wxEVT_COMMAND, [&](wxCommandEvent& event) {
+    wxMessageBox("Событие произошло!");
+});
+```
+
+**Официальная документация**:  
+[https://docs.wxwidgets.org/3.2.6/classwx_html_window.html](https://docs.wxwidgets.org/3.2.6/classwx_html_window.html)
+
+---
+
+### 9.14. wxInfoBar
+<img src="wx-icons/infobar_result.png" alt="wxInfoBar Icon" width="32" height="32" />
+
+- **Назначение**: Информационная панель.
+
+- **Пример кода**:
+```cpp
+wxInfoBar* infoBar = new wxInfoBar(parent);
+infoBar->ShowMessage("This is an info bar", wxICON_INFORMATION);
+```
+
+#### Дополнительные примеры:
+```cpp
+// Пример 1. Создание wxInfoBar
+wxInfoBar* infoBar = new wxInfoBar(parent);
+infoBar->ShowMessage("This is an info bar", wxICON_INFORMATION);
+
+// Пример 2. Изменение свойств wxInfoBar
+wxInfoBar* obj = new wxInfoBar(parent, wxID_ANY);
+obj->Show();
+
+// Пример 3. Обработка событий wxInfoBar
+obj->Bind(wxEVT_COMMAND, [&](wxCommandEvent& event) {
+    wxMessageBox("Событие произошло!");
+});
+```
+
+**Официальная документация**:  
+[https://docs.wxwidgets.org/3.2.6/classwx_info_bar.html](https://docs.wxwidgets.org/3.2.6/classwx_info_bar.html)
 
 ---
