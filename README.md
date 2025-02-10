@@ -1295,6 +1295,7 @@ rtb->AddTool(wxID_OPEN, wxBitmap("open.png", wxBITMAP_TYPE_PNG));
 ---
 
 ### 8.4. wxRibbonToolBar
+<img src="wx-icons/ribbon_buttonbar_result.png" alt="wxRibbonToolBar Icon" width="32" height="32" />
 
 - **Назначение**: Панель инструментов внутри ленты (Ribbon UI).
 - **Пример кода**:
