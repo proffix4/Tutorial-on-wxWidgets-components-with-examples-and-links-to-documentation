@@ -10,7 +10,10 @@
 6. [Вкладка Layout](#layout)  
 7. [Вкладка Forms](#forms)  
 8. [Вкладка Ribbon](#ribbon)  
-9. [Другие компоненты](#other)
+9. [Другие компоненты](#other)  
+
+## Компоненты в палитре [DialogBlocks](#dialogblocks)  
+
 ---
 
 <a name="common"></a>
@@ -1814,3 +1817,157 @@ obj->Bind(wxEVT_COMMAND, [&](wxCommandEvent& event) {
 [https://docs.wxwidgets.org/3.2.6/classwx_info_bar.html](https://docs.wxwidgets.org/3.2.6/classwx_info_bar.html)
 
 ---
+
+<a name="dialogblocks"></a>
+
+## Список компонент wxWidgets в палитре DialogBlocks
+
+
+
+### Sizers
+- **wxBoxSizer (horizontal)** ![wxSizer](wx-icons/sizer_result.png) – горизонтальный контейнер для размещения дочерних элементов в одну строку.  
+- **wxBoxSizer (vertical)** ![wxSizer](wx-icons/sizer_result.png) – вертикальный контейнер для размещения дочерних элементов в один столбец.  
+- **wxStaticBoxSizer (horizontal)** ![wxStaticBoxSizer](wx-icons/staticbox_sizer_result.png) – горизонтальный контейнер с рамкой, используемый для группировки элементов.  
+- **wxStaticBoxSizer (vertical)** ![wxStaticBoxSizer](wx-icons/staticbox_sizer_result.png) – вертикальный контейнер с рамкой, используемый для группировки элементов.  
+- **wxGridSizer** ![wxGridSizer](wx-icons/grid_sizer_result.png) – контейнер для равномерного распределения элементов в виде сетки с фиксированным числом строк и столбцов.  
+- **wxFlexGridSizer** ![wxFlexGridSizer](wx-icons/flex_grid_sizer_result.png) – гибкий контейнер-сетка, позволяющий адаптировать размеры строк и столбцов.  
+- **wxGridBagSizer** ![wxGridBagSizer](wx-icons/grid_bag_sizer_result.png) – расширенный контейнер-сетка, позволяющий объединять ячейки и задавать произвольное размещение.  
+- **wxStdDialogButtonSizer** ![wxStdDialogButtonSizer](wx-icons/stddialogbuttonsizer_result.png) – контейнер для размещения стандартных кнопок диалоговых окон с учетом платформенных стандартов.  
+- **Spacer** ![wxSpacer](wx-icons/spacer_result.png) – элемент-заполнитель, создающий пустое пространство для корректного выравнивания элементов.
+
+---
+
+### Static
+- **wxStaticText** ![wxStaticText](wx-icons/static_text_result.png) – элемент для отображения неизменяемого текста.  
+- **wxStaticBitmap** ![wxStaticBitmap](wx-icons/static_bitmap_result.png) – элемент для вывода изображения (битмапа) без возможности его редактирования.  
+- **wxStaticBox** ![wxStaticBoxSizer](wx-icons/staticbox_sizer_result.png) – графическая рамка для визуального объединения группы элементов.  
+- **wxStaticLine (horizontal)** ![wxStaticLine](wx-icons/static_line_result.png) – горизонтальная линия-разделитель для визуального отделения областей.  
+- **wxStaticLine (vertical)** ![wxStaticLine](wx-icons/static_line_result.png) – вертикальная линия-разделитель для визуального разделения элементов.  
+- **wxGauge** ![wxGauge](wx-icons/gauge_result.png) – полоска прогресса, отображающая ход выполнения операции.  
+- **wxAnimationCtrl** ![wxAnimationCtrl](wx-icons/animation_result.png) – элемент для воспроизведения анимаций или последовательностей изображений.
+
+---
+
+### Buttons
+- **wxButton** ![wxButton](wx-icons/button_result.png) – стандартная кнопка для выполнения команд при клике.  
+- **wxBitmapButton** ![wxBitmapButton](wx-icons/bitmap_button_result.png) – кнопка, на которой вместо текста отображается изображение.  
+- **wxToggleButton** ![wxToggleButton](wx-icons/toggle_button_result.png) – переключаемая кнопка, сохраняющая своё состояние (нажата/отпущена).  
+- **wxCheckBox** ![wxCheckBox](wx-icons/checkbox_result.png) – флажок, позволяющий выбирать или отменять опцию.  
+- **wxRadioButton** ![wxRadioButton](wx-icons/radio_button_result.png) – кнопка для выбора одного варианта из группы взаимно исключающих опций.  
+- **wxContextHelpButton** ![wxButton](wx-icons/button_result.png) – кнопка для вызова контекстной справки, часто отображается с символом вопроса.  
+- **wxSpinButton** ![wxSpinButton](wx-icons/spinbtn_result.png) – элемент с кнопками для увеличения или уменьшения числового значения.
+
+---
+
+### Lists
+- **wxListBox** ![wxListBox](wx-icons/list_box_result.png) – элемент для отображения списка строк с возможностью выбора одного или нескольких пунктов.  
+- **wxListCtrl** ![wxListCtrl](wx-icons/list_ctrl_result.png) – расширенный список с поддержкой отображения колонок и детальной информации.  
+- **wxCheckListBox** ![wxCheckListBox](wx-icons/checklistbox_result.png) – список, где у каждого элемента имеется флажок для множественного выбора.  
+- **wxChoice** ![wxChoice](wx-icons/choice_result.png) – выпадающий список для выбора одного элемента из предложенных вариантов.  
+- **wxComboBox** ![wxComboBox](wx-icons/combo_box_result.png) – комбинированный элемент, объединяющий текстовое поле и выпадающий список.  
+- **wxComboCtrl** ![wxComboBox](wx-icons/combo_box_result.png) – настраиваемый комбинированный элемент с возможностью изменения внешнего вида.  
+- **wxOwnerDrawnComboBox** ![wxComboBox](wx-icons/combo_box_result.png) – комбинированный элемент, позволяющий разработчику самостоятельно рисовать пункты списка.  
+- **wxBitmapComboBox** ![wxComboBox](wx-icons/combo_box_result.png) – комбинированный элемент, где пункты списка могут содержать изображения вместе с текстом.  
+- **wxRadioBox** ![wxRadioBox](wx-icons/radio_box_result.png) – группа радио кнопок, объединённых в один элемент с визуальной рамкой.  
+- **wxHtmlListBox** ![wxListBox](wx-icons/list_box_result.png) – список, поддерживающий отображение HTML-разметки для каждого элемента.  
+- **wxSimpleHtmlListBox** ![wxListBox](wx-icons/list_box_result.png) – упрощённая версия списка с возможностью базового HTML-оформления.
+
+---
+
+### Text
+- **wxTextCtrl (single-line)** ![wxTextCtrl](wx-icons/text_ctrl_result.png) – однострочное текстовое поле для ввода и отображения текста.  
+- **wxTextCtrl (multiline)** ![wxTextCtrl](wx-icons/text_ctrl_result.png) – многострочное текстовое поле для ввода больших объемов текста.  
+- **wxRichTextCtrl** ![wxRichTextCtrl](wx-icons/richtextctrl_result.png) – расширенный текстовый редактор с поддержкой форматирования, стилей и мультимедийного содержимого.  
+- **wxSearchCtrl** ![wxSearchCtrl](wx-icons/search_result.png) – текстовое поле, оптимизированное для ввода поисковых запросов, часто с дополнительными кнопками для очистки или поиска.
+
+---
+
+### Range
+- **wxScrollBar** ![wxScrollBar](wx-icons/scrollbar_result.png) – элемент для прокрутки содержимого, если его размер превышает видимую область.  
+- **wxSpinCtrl** ![wxSpinCtrl](wx-icons/spin_ctrl_result.png) – комбинированный элемент с возможностью ввода числового значения и кнопками для его изменения.  
+- **wxSlider** ![wxSlider](wx-icons/slider_result.png) – ползунок для выбора числового значения в заданном диапазоне.
+
+---
+
+### Pickers
+- **wxDatePickerCtrl** ![wxDatePickerCtrl](wx-icons/datepicker_result.png) – элемент для выбора даты с помощью всплывающего календаря.  
+- **wxColourPickerCtrl** ![wxColourPickerCtrl](wx-icons/colourPickerIcon_result.png) – контроль для выбора цвета из палитры.  
+- **wxFontPickerCtrl** ![wxFontPickerCtrl](wx-icons/fontPicker_result.png) – элемент для выбора шрифта с демонстрацией образца.  
+- **wxFilePickerCtrl** ![wxFilePickerCtrl](wx-icons/filePicker_result.png) – элемент, открывающий диалог выбора файла.  
+- **wxDirPickerCtrl** ![wxDirPickerCtrl](wx-icons/dirPicker_result.png) – элемент для выбора директории (папки) через стандартный диалог.
+
+---
+
+### Custom
+- **Foreign Window** ![wxPanel](wx-icons/panel_result.png) – элемент для интеграции окна, созданного вне фреймворка wxWidgets, позволяющий использовать сторонние компоненты.
+
+---
+
+### Containers
+- **wxPanel** ![wxPanel](wx-icons/panel_result.png) – базовый контейнер для группировки и размещения других элементов управления.  
+- **wxScrolledWindow** ![wxScrolledWindow](wx-icons/scrollwin_result.png) – окно с поддержкой прокрутки, если его содержимое превышает размер видимой области.  
+- **wxSplitterWindow** ![wxSplitterWindow](wx-icons/splitter_window_result.png) – контейнер, разделяющий область на две части с регулируемым размером каждой.  
+- **wxSashWindow** ![wxPanel](wx-icons/panel_result.png) – контейнер, позволяющий изменять размеры дочерних областей с помощью перетаскивания разделительной линии.  
+- **wxSashLayoutWindow** ![wxPanel](wx-icons/panel_result.png) – специализированный контейнер для динамического управления расположением элементов с использованием "шасси".  
+- **wxCollapsiblePane** ![wxCollapsiblePane](wx-icons/collpane_result.png) – панель, которую можно сворачивать и разворачивать, чтобы экономить пространство.  
+- **wxWizardPage** ![wxWizardPage](wx-icons/wizpage_result.png) – страница в последовательном мастере (wizard), предназначенная для пошагового выполнения сложных операций.  
+- **wxStatusBar** ![wxStatusBar](wx-icons/statusbar_result.png) – строка состояния, обычно располагаемая в нижней части окна для отображения информации о текущем состоянии приложения.
+
+---
+
+### Books
+- **wxNotebook** ![wxNotebook](wx-icons/notebook_result.png) – контейнер с вкладками для переключения между различными страницами интерфейса.  
+- **wxListbook** ![wxListbook](wx-icons/listbook_result.png) – элемент, где навигация между страницами осуществляется через список элементов.  
+- **wxChoicebook** ![wxChoicebook](wx-icons/choicebook_result.png) – контейнер, использующий выпадающий список (choice) для выбора активной страницы.  
+- **wxTreebook** ![wxNotebook](wx-icons/notebook_result.png) – элемент, организующий навигацию по страницам с использованием древовидной структуры.  
+- **wxToolbook** ![wxNotebook](wx-icons/notebook_result.png) – контейнер с вкладками, в котором для переключения между страницами используется панель инструментов.  
+- **wxAuiNotebook** ![wxAuiNotebook](wx-icons/auinotebook_result.png) – расширенный элемент с вкладками, поддерживающий докинг и гибкое управление расположением страниц.
+
+---
+
+### Managed Windows
+- **wxDialog** ![wxDialog](wx-icons/dialog_result.png) – окно для диалоговых сообщений, которое может быть модальным (блокирующим) или немодальным.  
+- **wxFrame** ![wxFrame](wx-icons/frame_result.png) – основное окно приложения с заголовком, рамкой и, как правило, меню.  
+- **wxPropertySheetDialog** ![wxDialog](wx-icons/dialog_result.png) – диалоговое окно, содержащее набор вкладок для настройки параметров или свойств.  
+- **wxWizard** ![wxWizard](wx-icons/wizard_result.png) – мастера (wizard), предлагающие пользователю пошаговое выполнение задач.
+
+---
+
+### Advanced
+- **wxTreeCtrl** ![wxTreeCtrl](wx-icons/tree_ctrl_result.png) – элемент для отображения иерархических данных в виде дерева.  
+- **wxGenericDirCtrl** ![wxGenericDirCtrl](wx-icons/genericdir_ctrl_result.png) – универсальный контроль для просмотра файловой системы и навигации по директориям.  
+- **wxCalendarCtrl** ![wxCalendarCtrl](wx-icons/calendar_result.png) – календарь для выбора дат с возможностью навигации по месяцам и годам.  
+- **wxGrid** ![wxGrid](wx-icons/grid_result.png) – табличный контроль, позволяющий работать с данными в виде сетки (аналог электронных таблиц).  
+- **wxGLCanvas** ![wxPanel](wx-icons/panel_result.png) – область для отрисовки с использованием OpenGL, предназначенная для графики и 3D.  
+- **wxHtmlWindow** ![wxHtmlWindow](wx-icons/htmlwin_result.png) – элемент для отображения простого HTML-содержимого.  
+- **wxHyperlinkCtrl** ![wxHyperlinkCtrl](wx-icons/hyperlink_ctrl_result.png) – контроль, отображающий гиперссылку, по которой можно перейти к указанному URL.  
+- **wxMediaCtrl** ![wxMediaCtrl](wx-icons/media_ctrl_result.png) – элемент для воспроизведения мультимедийного контента (аудио и видео).  
+- **Top-level class** ![wxPanel](wx-icons/panel_result.png) – базовый класс, используемый для создания пользовательских верхнеуровневых окон или виджетов.
+
+---
+
+### Toolbar
+- **wxToolBar** ![wxToolBar](wx-icons/toolbar_result.png) – стандартная панель инструментов для размещения кнопок и других элементов управления.  
+- **wxAuiToolBar** ![wxAuiToolBar](wx-icons/auitoolbar_result.png) – расширенная панель инструментов с поддержкой докинга, изменения размеров и настройки внешнего вида.  
+- **wxToolBar button** ![wxTool](wx-icons/tool_result.png) – отдельная кнопка, являющаяся элементом панели инструментов.  
+- **wxToolBar separator** ![wxToolSeparator](wx-icons/toolSeparator_result.png) – визуальный разделитель для группировки элементов на панели инструментов.  
+- **wxChoice tool** ![wxChoice](wx-icons/choice_result.png) – выпадающий список, встроенный в панель инструментов для выбора вариантов.  
+- **wxComboBox tool** ![wxComboBox](wx-icons/combo_box_result.png) – комбинированный элемент (текстовое поле с выпадающим списком), интегрированный в панель инструментов.  
+- **wxTextCtrl tool** ![wxTextCtrl](wx-icons/text_ctrl_result.png) – текстовое поле, встроенное в панель инструментов для ввода данных.  
+- **wxSpinCtrl tool** ![wxSpinCtrl](wx-icons/spin_ctrl_result.png) – числовой ввод с кнопками изменения значения, расположенный на панели инструментов.
+
+---
+
+### Menubar
+- **wxMenuBar** ![wxMenuBar](wx-icons/menubar_result.png) – строка меню в верхней части окна, содержащая набор выпадающих меню.  
+- **wxMenu** ![wxMenu](wx-icons/menu_result.png) – выпадающее меню, содержащее список команд и опций.  
+- **wxMenu item** ![wxMenuItem](wx-icons/menuitem_result.png) – отдельный пункт меню, который выполняет определённое действие при выборе.  
+- **wxMenu separator** ![wxSeparator](wx-icons/separator_result.png) – разделитель, используемый для логического группирования пунктов меню.
+
+---
+
+### Tasks
+- **Set Up DialogBlocks** – задача по настройке и организации блоков диалоговых окон в проекте.  
+- **Analyze Project** – задача по анализу структуры и компонентов проекта.  
+- **Set Up Data Transfer** – задача по настройке механизмов передачи данных между различными частями приложения.  
+- **Add Function** – задача по добавлению новой функциональности или метода в проект.
